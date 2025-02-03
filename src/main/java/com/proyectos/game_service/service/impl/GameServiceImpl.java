@@ -8,11 +8,18 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class GameServiceImpl implements GameService {
 
     public final GameRepository gameRepository;
+
+    @Override
+    public List<Game> findAll() {
+        return this.gameRepository.findAll();
+    }
 
     @Override
     public Game saveGame(Game gameRequest) {
