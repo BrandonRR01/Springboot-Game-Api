@@ -22,4 +22,6 @@ public class Game extends AbstractClass {
 
     private String name;
 
+    private Long userId;
+
 }

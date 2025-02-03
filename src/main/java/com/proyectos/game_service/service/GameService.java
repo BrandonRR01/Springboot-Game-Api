@@ -8,7 +8,7 @@ public interface GameService {
 
     List<Game> findAll();
 
-    Game saveGame (Game gameRequest);
+    Game saveGame (String userId, Game gameRequest);
 
     Game getGameById(Long id);
 

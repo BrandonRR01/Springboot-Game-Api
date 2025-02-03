@@ -22,7 +22,8 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public Game saveGame(Game gameRequest) {
+    public Game saveGame(String userId, Game gameRequest) {
+        gameRequest.setUserId(Long.parseLong(userId));
         return this.gameRepository.save(gameRequest);
     }
 

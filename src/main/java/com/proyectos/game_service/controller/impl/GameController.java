@@ -19,7 +19,7 @@ public class GameController implements GameApi {
     @Override
     public ResponseEntity<Game> saveGame(String userId, Game gameRequest) {
 
-        Game created = this.gameService.saveGame(gameRequest);
+        Game created = this.gameService.saveGame(userId, gameRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
